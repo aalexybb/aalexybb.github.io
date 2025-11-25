@@ -3,6 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QQYSQMDR8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0QQYSQMDR8');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -43,9 +52,11 @@
                         data-i18n="nav.interests">Interessos</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards"
                         data-i18n="nav.awards">Títols</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv/resume.pdf" download
+                        data-i18n="nav.download_cv">Descarregar CV</a></li>
             </ul>
             <!-- Language Selector -->
-            <div class="language-selector-bottom mt-auto pt-3">
+            <div class="language-selector-bottom mt-auto">
                 <select id="languageSelect" class="form-select">
                     <option value="ca">Català</option>
                     <option value="es">Español</option>
@@ -87,66 +98,17 @@
                 <h2 class="mb-5" data-i18n="experience.title">Experiència</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0" data-i18n="experience.job1.title">Desenvolupador Web Sènior</h3>
-                        <div class="subheading mb-3">Intelitec Solutions</div>
-                        <p data-i18n="experience.job1.description">Aportar estratègies de supervivència guanyar-guanyar
-                            per assegurar una dominació proactiva.
-                            Al
-                            final del
-                            dia, avançant cap al futur, una nova normalitat que ha evolucionat des de la generació
-                            X està a la pista
-                            dirigint-se cap a una solució al núvol optimitzada. El contingut generat per l'usuari
-                            en temps real tindrà
-                            múltiples punts de contacte per a la deslocalització.</p>
+                        <h3 class="mb-0" data-i18n="experience.job1.title">Tècnic Informàtic</h3>
+                        <div class="subheading mb-3" data-i18n="experience.job1.company">Clinica del Mobil - La teva
+                            botiga de confiança</div>
+                        <p data-i18n="experience.job1.description">Reparació i manteniment de dispositius mòbils i
+                            informàtics. Atenció al client i gestió de la botiga. Diagnòstic i resolució d'incidències
+                            de maquinari i programari.</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary" data-i18n="experience.job1.date">Març 2013 -
-                            Present</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary" data-i18n="experience.job1.date">Octubre 2024
+                            - Març 2025</span></div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0" data-i18n="experience.job2.title">Desenvolupador Web</h3>
-                        <div class="subheading mb-3">Intelitec Solutions</div>
-                        <p data-i18n="experience.job2.description">Capitalitzar les oportunitats fàcils per identificar
-                            una activitat de valor agregat
-                            aproximat per a proves beta.
-                            Superar la bretxa digital amb clics addicionals de DevOps. La immersió en nanotecnologia
-                            al llarg de l'autopista de la informació tancarà el cicle de centrar-se únicament en els
-                            resultats
-                            finals.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary" data-i18n="experience.job2.date">Desembre 2011
-                            - Març 2013</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0" data-i18n="experience.job3.title">Dissenyador Web Junior</h3>
-                        <div class="subheading mb-3">Shout! Media Productions</div>
-                        <p data-i18n="experience.job3.description">Podcasting de gestió del canvi operacional dins dels
-                            fluxos de treball per establir
-                            un marc. Portant
-                            indicadors clau de rendiment sense interrupcions fora de línia per maximitzar la cua
-                            llarga. Mantenint l'atenció
-                            en l'objectiu mentre es realitza una immersió profunda en la mentalitat d'inici per
-                            derivar convergència en
-                            la integració multiplataforma.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary" data-i18n="experience.job3.date">Juliol 2010 -
-                            Desembre 2011</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0" data-i18n="experience.job4.title">Becari de Disseny Web</h3>
-                        <div class="subheading mb-3">Shout! Media Productions</div>
-                        <p data-i18n="experience.job4.description">Administrar col·laborativament mercats empoderats a
-                            través de xarxes plug-and-play.
-                            Dinàmicament
-                            procrastinar usuaris B2C després dels beneficis de la base instal·lada. Visualitzar
-                            dramàticament la convergència
-                            dirigida al client sense un ROI revolucionari.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary" data-i18n="experience.job4.date">Setembre 2008
-                            - Juny 2010</span></div>
-                </div>
+
             </div>
         </section>
         <hr class="m-0" />
@@ -161,7 +123,6 @@
                         </div>
                         <div data-i18n="education.school1.field">Ciències de la Computació - Especialització en
                             Desenvolupament Web</div>
-                        <p data-i18n="education.school1.gpa">Mitjana: 3.23</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary" data-i18n="education.school1.date">Agost 2006
                             - Maig 2010</span></div>
@@ -171,7 +132,6 @@
                         <h3 class="mb-0" data-i18n="education.school2.name">Escola Secundària James Buchanan</h3>
                         <div class="subheading mb-3" data-i18n="education.school2.degree">Programa Especialitzat en
                             Tecnologia</div>
-                        <p data-i18n="education.school2.gpa">Mitjana: 3.56</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary" data-i18n="education.school2.date">Agost 2002
                             - Maig 2006</span></div>
@@ -183,40 +143,8 @@
         <section class="resume-section" id="skills">
             <div class="resume-section-content">
                 <h2 class="mb-5" data-i18n="skills.title">Habilitats</h2>
-                <div class="subheading mb-3" data-i18n="skills.languages">Llenguatges de Programació i Eines</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                </ul>
-                <div class="subheading mb-3" data-i18n="skills.workflow">Flux de Treball</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        <span data-i18n="skills.item1">Disseny Responsiu, Mobile-First</span>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        <span data-i18n="skills.item2">Proves i Depuració en Múltiples Navegadors</span>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        <span data-i18n="skills.item3">Equips Multifuncionals</span>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        <span data-i18n="skills.item4">Desenvolupament Àgil i Scrum</span>
-                    </li>
-                </ul>
+                <div class="subheading mb-3" data-i18n="skills.subtitle">Llenguatges de Programació i Eines</div>
+                <p class="lead mb-5" data-i18n="skills.list"></p>
             </div>
         </section>
         <hr class="m-0" />
@@ -253,31 +181,7 @@
                         <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
                         <span data-i18n="awards.award2">Especialista en Web Mòbil - Certificació de Google</span>
                     </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        <span data-i18n="awards.award3">1<sup>er</sup> Lloc - Universitat de Colorado Boulder -
-                            Competència de Tecnologia Emergent 2009</span>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        <span data-i18n="awards.award4">1<sup>er</sup> Lloc - Universitat de Colorado Boulder - Adobe
-                            Creative Jam 2008 (Categoria Disseny UI)</span>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        <span data-i18n="awards.award5">2<sup>on</sup> Lloc - Universitat de Colorado Boulder -
-                            Competència de Tecnologia Emergent 2008</span>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        <span data-i18n="awards.award6">1<sup>er</sup> Lloc - Escola Secundària James Buchanan -
-                            Hackathon 2006</span>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        <span data-i18n="awards.award7">3<sup>er</sup> Lloc - Escola Secundària James Buchanan -
-                            Hackathon 2005</span>
-                    </li>
+
                 </ul>
             </div>
         </section>
