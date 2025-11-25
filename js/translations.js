@@ -212,3 +212,43 @@ document.addEventListener('DOMContentLoaded', function () {
         changeLanguage(this.value);
     });
 });
+
+// Dark Mode Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const icon = themeToggle.querySelector('i');
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+
+        if (theme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    }
+
+    // Load saved preference
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        setTheme(currentTheme);
+    } else if (prefersDarkScheme.matches) {
+        setTheme('dark');
+    }
+
+    // Toggle event
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        });
+    }
+});
