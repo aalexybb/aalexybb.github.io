@@ -31,4 +31,20 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Close navbar when clicking outside on mobile
+    document.addEventListener('click', function (event) {
+        const navbar = document.querySelector('#navbarResponsive');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const sideNav = document.querySelector('#sideNav');
+
+        // Check if navbar is open and click is outside
+        if (navbar && navbar.classList.contains('show')) {
+            const isClickInsideNav = sideNav.contains(event.target);
+
+            if (!isClickInsideNav) {
+                navbarToggler.click();
+            }
+        }
+    });
+
 });
