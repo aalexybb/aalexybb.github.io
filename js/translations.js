@@ -15,7 +15,8 @@ const translations = {
             surname: "Yerga Busquet",
             address: "Vilafranca del Penedès, Barcelona · (+34) 633 33 60 70 ·",
             email: "alexanderyergabusquet@gmail.com",
-            description: "Sóc un tècnic informàtic apassionat per la tecnologia i la resolució de problemes. Tinc experiència en manteniment de sistemes, configuració de xarxes i suport tècnic. M'agrada aprendre contínuament i estar al dia de les últimes novetats tecnològiques. Busco oportunitats per créixer professionalment i aportar els meus coneixements en un entorn dinàmic."
+            description: "Sóc un tècnic informàtic apassionat per la tecnologia i la resolució de problemes. Tinc experiència en manteniment de sistemes, configuració de xarxes i suport tècnic. M'agrada aprendre contínuament i estar al dia de les últimes novetats tecnològiques. Busco oportunitats per créixer professionalment i aportar els meus coneixements en un entorn dinàmic.",
+            scan_qr: "Escaneja per connectar"
         },
         experience: {
             title: "Experiència",
@@ -72,7 +73,8 @@ const translations = {
             surname: "Yerga Busquet",
             address: "Vilafranca del Penedès, Barcelona · (+34) 633 33 60 70 ·",
             email: "alexanderyergabusquet@gmail.com",
-            description: "Soy un técnico informático apasionado por la tecnología y la resolución de problemas. Tengo experiencia en mantenimiento de sistemas, configuración de redes y soporte técnico. Me gusta aprender continuamente y estar al día de las últimas novedades tecnológicas. Busco oportunidades para crecer profesionalmente y aportar mis conocimientos en un entorno dinámico."
+            description: "Soy un técnico informático apasionado por la tecnología y la resolución de problemas. Tengo experiencia en mantenimiento de sistemas, configuración de redes y soporte técnico. Me gusta aprender continuamente y estar al día de las últimas novedades tecnológicas. Busco oportunidades para crecer profesionalmente y aportar mis conocimientos en un entorno dinámico.",
+            scan_qr: "Escanea para conectar"
         },
         experience: {
             title: "Experiencia",
@@ -129,7 +131,8 @@ const translations = {
             surname: "Yerga Busquet",
             address: "Vilafranca del Penedès, Barcelona · (+34) 633 33 60 70 ·",
             email: "alexanderyergabusquet@gmail.com",
-            description: "I am an IT technician passionate about technology and problem-solving. I have experience in system maintenance, network configuration, and technical support. I enjoy continuous learning and keeping up to date with the latest technological trends. I am looking for opportunities to grow professionally and contribute my knowledge in a dynamic environment."
+            description: "I am an IT technician passionate about technology and problem-solving. I have experience in system maintenance, network configuration, and technical support. I enjoy continuous learning and keeping up to date with the latest technological trends. I am looking for opportunities to grow professionally and contribute my knowledge in a dynamic environment.",
+            scan_qr: "Scan to connect"
         },
         experience: {
             title: "Experience",

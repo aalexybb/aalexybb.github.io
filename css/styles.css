@@ -12886,3 +12886,30 @@ section.resume-section .resume-section-content {
   color: #fff;
   padding: 0.5rem;
 }
+
+/* QR Code Styles */
+.qr-code-container {
+  text-align: center;
+}
+
+.qr-code-img {
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--bs-primary);
+  border-radius: 0.5rem;
+  padding: 5px;
+  background: white;
+}
+
+.qr-code-label {
+  font-size: 0.9rem;
+  color: var(--bs-secondary);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .qr-code-container {
+    margin-bottom: 2rem;
+  }
+}
