@@ -8,7 +8,20 @@ const translations = {
             skills: "Habilitats",
             interests: "Interessos",
             awards: "Títols",
+            contact: "Contacte",
             download_cv: "Descarregar CV"
+        },
+        success: {
+            title: "Missatge Enviat!",
+            message: "Gràcies per contactar amb mi. Et respondré el més aviat possible.",
+            back: "Tornar a l'Inici"
+        },
+        contact: {
+            title: "Contacta'm",
+            name: "Nom",
+            email: "Correu electrònic",
+            message: "Missatge",
+            submit: "Enviar"
         },
         about: {
             title: "Alexander",
@@ -66,7 +79,20 @@ const translations = {
             skills: "Habilidades",
             interests: "Intereses",
             awards: "Títulos",
+            contact: "Contacto",
             download_cv: "Descargar CV"
+        },
+        success: {
+            title: "¡Mensaje Enviado!",
+            message: "Gracias por contactar conmigo. Te responderé lo antes posible.",
+            back: "Volver al Inicio"
+        },
+        contact: {
+            title: "Contáctame",
+            name: "Nombre",
+            email: "Correo electrónico",
+            message: "Mensaje",
+            submit: "Enviar"
         },
         about: {
             title: "Alexander",
@@ -124,7 +150,20 @@ const translations = {
             skills: "Skills",
             interests: "Interests",
             awards: "Awards",
+            contact: "Contact",
             download_cv: "Download CV"
+        },
+        contact: {
+            title: "Contact Me",
+            name: "Name",
+            email: "Email",
+            message: "Message",
+            submit: "Send"
+        },
+        success: {
+            title: "Message Sent!",
+            message: "Thank you for contacting me. I will reply shortly.",
+            back: "Back to Home"
         },
         about: {
             title: "Alexander",
@@ -251,6 +290,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTheme('light');
             } else {
                 setTheme('dark');
+            }
+        });
+    }
+});
+
+// Contact Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const contactBtn = document.getElementById('contactBtn');
+    const contactModal = document.getElementById('contactModal');
+    const closeModal = document.querySelector('.close-modal');
+
+    if (contactBtn && contactModal && closeModal) {
+        contactBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            contactModal.classList.add('show');
+        });
+
+        closeModal.addEventListener('click', () => {
+            contactModal.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                contactModal.classList.remove('show');
             }
         });
     }
