@@ -43,7 +43,7 @@ git push
 ## 🚀 GitHub Pages
 Los cambios se publicarán automáticamente en tu sitio web en unos minutos después de hacer `git push`.
 
-URL del sitio: https://aalexybb.github.io
+URL del sitio: https://aalexybb.github.io/
 
 ## 🛠️ Estructura del proyecto
 - `index.html` - Página principal con todo el contenido
