@@ -12779,9 +12779,11 @@ section.resume-section .resume-section-content {
 
 /* Language Selector Styles */
 .language-selector-bottom {
-  padding: 0 1rem;
+  padding: 0 0.75rem;
   margin-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .language-selector-bottom select {
@@ -12795,7 +12797,7 @@ section.resume-section .resume-section-content {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  padding: 0.75rem 0.5rem;
+  padding: 0.75rem 1.5rem 0.75rem 0.25rem;
   width: 100%;
   text-align: center;
   text-align-last: center;
@@ -12804,8 +12806,9 @@ section.resume-section .resume-section-content {
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.75)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right 0.5rem center;
+  background-position: right 0.25rem center;
   background-size: 1em;
+  box-sizing: border-box;
 }
 
 .language-selector-bottom select:hover {
