@@ -905,6 +905,17 @@ progress {
   }
 }
 
+/* Print Profile Image */
+.print-profile-img {
+  width: 150px;
+  margin-right: 1rem;
+}
+
+/* QR Code Label */
+.qr-code-label {
+  font-size: 0.8rem;
+}
+
 [data-theme='dark'] .modal-content {
   background-color: #2d2d2d;
   color: #fff;

@@ -1,0 +1,376 @@
+/* ============================================
+   SCROLL ANIMATIONS - Smooth & Elegant
+   ============================================ */
+
+/* Base animation styles */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Fade animations */
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos="fade-down"] {
+    transform: translateY(-50px);
+}
+
+[data-aos="fade-down"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(50px);
+}
+
+[data-aos="fade-left"].aos-animate {
+    transform: translateX(0);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-50px);
+}
+
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0);
+}
+
+/* Zoom animations */
+[data-aos="zoom-in"] {
+    transform: scale(0.8);
+}
+
+[data-aos="zoom-in"].aos-animate {
+    transform: scale(1);
+}
+
+[data-aos="zoom-out"] {
+    transform: scale(1.2);
+}
+
+[data-aos="zoom-out"].aos-animate {
+    transform: scale(1);
+}
+
+/* Flip animations */
+[data-aos="flip-left"] {
+    transform: perspective(2500px) rotateY(-100deg);
+}
+
+[data-aos="flip-left"].aos-animate {
+    transform: perspective(2500px) rotateY(0);
+}
+
+[data-aos="flip-right"] {
+    transform: perspective(2500px) rotateY(100deg);
+}
+
+[data-aos="flip-right"].aos-animate {
+    transform: perspective(2500px) rotateY(0);
+}
+
+/* Slide animations */
+[data-aos="slide-up"] {
+    transform: translateY(100%);
+    opacity: 1;
+}
+
+[data-aos="slide-up"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos="slide-down"] {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+[data-aos="slide-down"].aos-animate {
+    transform: translateY(0);
+}
+
+/* Custom animations for specific elements */
+
+/* Section headers */
+.resume-section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.resume-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #36a3f7, #974a2d);
+    transition: width 0.8s ease;
+}
+
+.resume-section h2.aos-animate::after {
+    width: 100%;
+}
+
+/* Profile image animation */
+.img-profile {
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.img-profile.aos-animate {
+    transform: scale(1);
+}
+
+/* Social icons stagger */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icons a:nth-child(1) .social-icon {
+    transition-delay: 0.1s;
+}
+
+.social-icons a:nth-child(2) .social-icon {
+    transition-delay: 0.2s;
+}
+
+.social-icons a:nth-child(3) .social-icon {
+    transition-delay: 0.3s;
+}
+
+.social-icons a:nth-child(4) .social-icon {
+    transition-delay: 0.4s;
+}
+
+/* Experience/Education items */
+.d-flex.flex-column.flex-md-row {
+    transition: all 0.5s ease;
+}
+
+/* Skills animation */
+.list-inline-item {
+    transition: all 0.4s ease;
+}
+
+/* QR Code container */
+.qr-code-container {
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom easing for sections */
+.resume-section {
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Parallax effect on scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .parallax-section {
+        transition: transform 0.1s ease-out;
+    }
+}
+
+/* Fade in from bottom with bounce */
+@keyframes fadeInUpBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in from left with slide */
+@keyframes fadeInLeftSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade in from right with slide */
+@keyframes fadeInRightSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Rotate in animation */
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+/* Apply animations to specific elements */
+.animate-bounce-in {
+    animation: fadeInUpBounce 0.8s ease-out;
+}
+
+.animate-slide-left {
+    animation: fadeInLeftSlide 0.6s ease-out;
+}
+
+.animate-slide-right {
+    animation: fadeInRightSlide 0.6s ease-out;
+}
+
+.animate-scale {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.animate-rotate {
+    animation: rotateIn 0.8s ease-out;
+}
+
+/* Stagger delays for list items */
+.stagger-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stagger-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stagger-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.stagger-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.stagger-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.stagger-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.stagger-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.stagger-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+/* Hover effects enhancement */
+.resume-section:hover {
+    transform: translateY(-2px);
+}
+
+/* Progress bar animation */
+.progress-bar {
+    transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Button pulse effect */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.btn-primary:hover {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Accessibility - Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .resume-section h2::after {
+    background: linear-gradient(90deg, #85cbf9, #f093fb);
+}
+
+/* Loading state */
+.loading-animation {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Intersection observer fallback */
+.no-js [data-aos] {
+    opacity: 1;
+    transform: none;
+}
