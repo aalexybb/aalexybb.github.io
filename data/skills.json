@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "ca": "Microsoft Office",
+            "es": "Microsoft Office",
+            "en": "Microsoft Office"
+        },
+        "percent": 70
+    },
+    {
+        "id": 2,
+        "name": {
+            "ca": "Configuració de servidors",
+            "es": "Configuración de servidores",
+            "en": "Server Configuration"
+        },
+        "percent": 80
+    },
+    {
+        "id": 3,
+        "name": {
+            "ca": "Manteniment de Hardware",
+            "es": "Mantenimiento de Hardware",
+            "en": "Hardware Maintenance"
+        },
+        "percent": 90
+    },
+    {
+        "id": 4,
+        "name": {
+            "ca": "Xarxes",
+            "es": "Redes",
+            "en": "Networking"
+        },
+        "percent": 85
+    },
+    {
+        "id": 5,
+        "name": {
+            "ca": "Windows",
+            "es": "Windows",
+            "en": "Windows"
+        },
+        "percent": 95
+    },
+    {
+        "id": 6,
+        "name": {
+            "ca": "Linux",
+            "es": "Linux",
+            "en": "Linux"
+        },
+        "percent": 95
+    }
+]

@@ -8,6 +8,7 @@ const translations = {
             skills: "Habilitats",
             interests: "Interessos",
             awards: "Títols",
+            blog: "Blog",
             contact: "Contacte",
             download_cv: "Descarregar CV"
         },
@@ -69,6 +70,16 @@ const translations = {
             title: "Certificacions",
             award1: "Introduction to Cybersecurity - Cisco (Exp: Nov 2025)",
             award2: "CCNA: Introduction to Networks - Cisco (Exp: Set 2024)"
+        },
+        blog: {
+            title: "Blog",
+            read_more: "Llegir més",
+            posted_on: "Publicat el",
+            back: "Tornar",
+            search_placeholder: "Cercar articles..."
+        },
+        footer: {
+            license: "Llicència GNU"
         }
     },
     es: {
@@ -79,6 +90,7 @@ const translations = {
             skills: "Habilidades",
             interests: "Intereses",
             awards: "Títulos",
+            blog: "Blog",
             contact: "Contacto",
             download_cv: "Descargar CV"
         },
@@ -140,6 +152,16 @@ const translations = {
             title: "Certificaciones",
             award1: "Introduction to Cybersecurity - Cisco (Exp: Nov 2025)",
             award2: "CCNA: Introduction to Networks - Cisco (Exp: Sep 2024)"
+        },
+        blog: {
+            title: "Blog",
+            read_more: "Leer más",
+            posted_on: "Publicado el",
+            back: "Volver",
+            search_placeholder: "Buscar artículos..."
+        },
+        footer: {
+            license: "Licencia GNU"
         }
     },
     en: {
@@ -150,6 +172,7 @@ const translations = {
             skills: "Skills",
             interests: "Interests",
             awards: "Awards",
+            blog: "Blog",
             contact: "Contact",
             download_cv: "Download CV"
         },
@@ -211,9 +234,22 @@ const translations = {
             title: "Certifications",
             award1: "Introduction to Cybersecurity - Cisco (Exp: Nov 2025)",
             award2: "CCNA: Introduction to Networks - Cisco (Exp: Sep 2024)"
+        },
+        blog: {
+            title: "Blog",
+            read_more: "Read More",
+            posted_on: "Posted on",
+            back: "Back",
+            search_placeholder: "Search posts..."
+        },
+        footer: {
+            license: "GNU License"
         }
     }
 };
+
+// Expose translations globally
+window.translations = translations;
 
 // Función para obtener valor anidado del objeto de traducciones
 function getNestedTranslation(obj, path) {
@@ -229,7 +265,11 @@ function changeLanguage(lang) {
         const translation = getNestedTranslation(translations[lang], key);
 
         if (translation) {
-            element.innerHTML = translation;
+            if (key === 'about.description' && window.startTypingEffect) {
+                window.startTypingEffect(translation, 'typing-text');
+            } else {
+                element.innerHTML = translation;
+            }
         }
     });
 
@@ -249,51 +289,19 @@ document.addEventListener('DOMContentLoaded', function () {
     languageSelect.value = savedLanguage;
     changeLanguage(savedLanguage);
 
+    // Trigger typing effect for initial load
+    const initialDescription = getNestedTranslation(translations[savedLanguage], 'about.description');
+    if (initialDescription && window.startTypingEffect) {
+        window.startTypingEffect(initialDescription, 'typing-text');
+    }
+
     // Escuchar cambios en el selector
     languageSelect.addEventListener('change', function () {
         changeLanguage(this.value);
     });
 });
 
-// Dark Mode Logic
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('themeToggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const icon = themeToggle.querySelector('i');
 
-    function setTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-
-        if (theme === 'dark') {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        }
-    }
-
-    // Load saved preference
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-        setTheme(currentTheme);
-    } else if (prefersDarkScheme.matches) {
-        setTheme('dark');
-    }
-
-    // Toggle event
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            if (theme === 'dark') {
-                setTheme('light');
-            } else {
-                setTheme('dark');
-            }
-        });
-    }
-});
 
 // Contact Modal Logic
 document.addEventListener('DOMContentLoaded', () => {

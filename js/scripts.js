@@ -48,3 +48,99 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// Back to Top Button Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopBtn = document.getElementById('backToTop');
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+                // Small delay to allow display:block to apply before opacity transition
+                setTimeout(() => {
+                    backToTopBtn.style.opacity = '1';
+                    backToTopBtn.style.transform = 'scale(1)';
+                }, 10);
+            } else {
+                backToTopBtn.style.opacity = '0';
+                backToTopBtn.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    if (window.scrollY <= 300) {
+                        backToTopBtn.style.display = 'none';
+                    }
+                }, 300);
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+// Dark Mode Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const icon = themeToggle ? themeToggle.querySelector('i') : null;
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+
+        if (icon) {
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    }
+
+    // Load saved preference
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        setTheme(currentTheme);
+    } else if (prefersDarkScheme.matches) {
+        setTheme('dark');
+    }
+
+    // Toggle event
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        });
+    }
+});
+
+// Typing Effect Logic
+let typingTimeout;
+
+function typeWriter(text, elementId, speed = 50) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    element.innerHTML = '';
+    let i = 0;
+
+    // Clear any existing timeout to prevent conflicts
+    if (typingTimeout) clearTimeout(typingTimeout);
+
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            typingTimeout = setTimeout(type, speed);
+        }
+    }
+
+    type();
+}
+
+// Expose typeWriter to be used by translations.js
+window.startTypingEffect = typeWriter;
