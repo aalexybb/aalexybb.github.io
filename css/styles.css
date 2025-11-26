@@ -13097,6 +13097,17 @@ section.resume-section .resume-section-content {
   color: #f8f9fa;
 }
 
+/* Dark Mode - Headings */
+[data-theme="dark"] h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+  color: #e9ecef;
+}
+
 .close-modal {
   color: #aaa;
   float: right;
