@@ -68,4 +68,12 @@ function initSkillsAnimation() {
     progressBars.forEach(bar => {
         observer.observe(bar);
     });
+
+    // Ensure skills are visible when printing
+    window.addEventListener('beforeprint', () => {
+        progressBars.forEach(bar => {
+            const targetWidth = bar.getAttribute('aria-valuenow') + '%';
+            bar.style.width = targetWidth;
+        });
+    });
 }
