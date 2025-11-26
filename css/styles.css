@@ -13073,7 +13073,7 @@ section.resume-section .resume-section-content {
   opacity: 1;
 }
 
-.modal-content {
+.modal-overlay .modal-content {
   background-color: #fff;
   margin: 10% auto;
   padding: 2rem;
@@ -13091,7 +13091,7 @@ section.resume-section .resume-section-content {
   transform: translateY(0);
 }
 
-[data-theme="dark"] .modal-content {
+[data-theme="dark"] .modal-overlay .modal-content {
   background-color: #2c3034;
   border-color: #495057;
   color: #f8f9fa;

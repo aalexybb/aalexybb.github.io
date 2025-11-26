@@ -3,64 +3,67 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('blogSearch');
     const languageSelect = document.getElementById('languageSelect');
 
-    // Inlined blog posts data to avoid CORS issues with local file protocol
-    const allPosts = [
-        {
-            "id": 1,
-            "date": "2025-11-26",
-            "image": "assets/img/blog1.png",
-            "title": {
-                "ca": "Benvinguts al meu nou Blog",
-                "es": "Bienvenidos a mi nuevo Blog",
-                "en": "Welcome to my new Blog"
-            },
-            "summary": {
-                "ca": "Aquest és el primer post del meu blog personal on compartiré els meus projectes i aprenentatges.",
-                "es": "Este es el primer post de mi blog personal donde compartiré mis proyectos y aprendizajes.",
-                "en": "This is the first post of my personal blog where I will share my projects and learnings."
-            },
-            "content": {
-                "ca": "<p>Hola a tothom! Estic molt emocionat d'iniciar aquest blog. Aquí trobareu articles sobre desenvolupament web, tecnologia i els meus projectes personals.</p><p>Estigueu atents a les properes actualitzacions!</p>",
-                "es": "<p>¡Hola a todos! Estoy muy emocionado de iniciar este blog. Aquí encontraréis artículos sobre desarrollo web, tecnología y mis proyectos personales.</p><p>¡Estad atentos a las próximas actualizaciones!</p>",
-                "en": "<p>Hello everyone! I am very excited to start this blog. Here you will find articles about web development, technology, and my personal projects.</p><p>Stay tuned for future updates!</p>"
-            },
-            "tags": [
-                "General",
-                "Update"
-            ]
-        },
-        {
-            "id": 2,
-            "date": "2025-11-26",
-            "image": "assets/img/blog2.png",
-            "title": {
-                "ca": "Documentació del Projecte",
-                "es": "Documentación del Proyecto",
-                "en": "Project Documentation"
-            },
-            "summary": {
-                "ca": "Guia completa sobre com actualitzar i mantenir aquest lloc web.",
-                "es": "Guía completa sobre cómo actualizar y mantener este sitio web.",
-                "en": "Complete guide on how to update and maintain this website."
-            },
-            "content": {
-                "ca": "<h3>🌐 Característiques</h3><ul><li>✅ Disseny responsive i modern</li><li>✅ Sistema de traducció multiidioma (Català, Español, English)</li><li>✅ Selector d'idioma integrat al menú lateral</li><li>✅ Persistència de preferències d'idioma</li></ul><h3>📝 Com actualitzar el repositori a GitHub</h3><p>Quan facis canvis al teu lloc web i vulguis pujar-los a GitHub, segueix aquests passos:</p><h4>1. Veure els canvis realitzats</h4><pre><code>git status</code></pre><h4>2. Afegir tots els fitxers modificats</h4><pre><code>git add .</code></pre><h4>3. Crear un commit amb un missatge descriptiu</h4><pre><code>git commit -m \"Descripció dels canvis realitzats\"</code></pre><h4>4. Pujar els canvis a GitHub</h4><pre><code>git push</code></pre><h3>🚀 GitHub Pages</h3><p>Els canvis es publicaran automàticament al teu lloc web en uns minuts després de fer <code>git push</code>.</p><h3>🛠️ Estructura del projecte</h3><ul><li><code>index.html</code> - Pàgina principal amb tot el contingut</li><li><code>css/styles.css</code> - Estils personalitzats</li><li><code>js/scripts.js</code> - Scripts de funcionalitat</li><li><code>js/translations.js</code> - Sistema de traduccions multiidioma</li><li><code>assets/</code> - Imatges i recursos</li></ul><h3>📝 Gestión del Blog</h3><p>Per afegir nous posts al blog, edita el fitxer <code>data/blog_posts.json</code>.</p>",
-                "es": "<h3>🌐 Características</h3><ul><li>✅ Diseño responsive y moderno</li><li>✅ Sistema de traducción multiidioma (Català, Español, English)</li><li>✅ Selector de idioma integrado en el menú lateral</li><li>✅ Persistencia de preferencias de idioma</li></ul><h3>📝 Cómo actualizar el repositorio en GitHub</h3><p>Cuando hagas cambios en tu sitio web y quieras subirlos a GitHub, sigue estos pasos:</p><h4>1. Ver los cambios realizados</h4><pre><code>git status</code></pre><h4>2. Añadir todos los archivos modificados</h4><pre><code>git add .</code></pre><h4>3. Crear un commit con un mensaje descriptivo</h4><pre><code>git commit -m \"Descripción de los cambios realizados\"</code></pre><h4>4. Subir los cambios a GitHub</h4><pre><code>git push</code></pre><h3>🚀 GitHub Pages</h3><p>Los cambios se publicarán automáticamente en tu sitio web en unos minutos después de hacer <code>git push</code>.</p><h3>🛠️ Estructura del proyecto</h3><ul><li><code>index.html</code> - Página principal con todo el contenido</li><li><code>css/styles.css</code> - Estilos personalizados</li><li><code>js/scripts.js</code> - Scripts de funcionalidad</li><li><code>js/translations.js</code> - Sistema de traducciones multiidioma</li><li><code>assets/</code> - Imágenes y recursos</li></ul><h3>📝 Gestión del Blog</h3><p>Para añadir nuevos posts al blog, edita el archivo <code>data/blog_posts.json</code>.</p>",
-                "en": "<h3>🌐 Features</h3><ul><li>✅ Responsive and modern design</li><li>✅ Multi-language translation system (Catalan, Spanish, English)</li><li>✅ Language selector integrated in the side menu</li><li>✅ Language preference persistence</li></ul><h3>📝 How to update the repository on GitHub</h3><p>When you make changes to your website and want to upload them to GitHub, follow these steps:</p><h4>1. View changes made</h4><pre><code>git status</code></pre><h4>2. Add all modified files</h4><pre><code>git add .</code></pre><h4>3. Create a commit with a descriptive message</h4><pre><code>git commit -m \"Description of changes made\"</code></pre><h4>4. Push changes to GitHub</h4><pre><code>git push</code></pre><h3>🚀 GitHub Pages</h3><p>Changes will be automatically published to your website in a few minutes after running <code>git push</code>.</p><h3>🛠️ Project Structure</h3><ul><li><code>index.html</code> - Main page with all content</li><li><code>css/styles.css</code> - Custom styles</li><li><code>js/scripts.js</code> - Functionality scripts</li><li><code>js/translations.js</code> - Multi-language translation system</li><li><code>assets/</code> - Images and resources</li></ul><h3>📝 Blog Management</h3><p>To add new posts to the blog, edit the <code>data/blog_posts.json</code> file.</p>"
-            },
-            "tags": [
-                "Documentation",
-                "Guide"
-            ]
-        }
-    ];
+    let allPosts = [];
+
+    // Fetch posts from JSON file
+    fetch('data/blog_posts.json')
+        .then(response => response.json())
+        .then(data => {
+            allPosts = data;
+            renderPosts(allPosts, getCurrentLang());
+        })
+        .catch(error => {
+            console.error('Error loading blog posts:', error);
+            blogContainer.innerHTML = '<p class="text-center text-danger">Error loading posts. Please try again later.</p>';
+        });
 
     function getCurrentLang() {
         return localStorage.getItem('preferredLanguage') || 'ca';
     }
 
-    // Initial render
-    renderPosts(allPosts, getCurrentLang());
+    // Render posts function
+    function renderPosts(posts, lang) {
+        blogContainer.innerHTML = '';
+
+        if (posts.length === 0) {
+            blogContainer.innerHTML = '<p class="text-center text-muted">No posts found.</p>';
+            return;
+        }
+
+        // Get translations or defaults
+        const translations = window.translations || {};
+        const readMoreText = translations[lang]?.blog?.read_more || 'Llegir més';
+        const postedOnText = translations[lang]?.blog?.posted_on || 'Publicat el';
+
+        posts.forEach(post => {
+            // Fallback to English if translation missing
+            const title = post.title[lang] || post.title['en'];
+            const summary = post.summary[lang] || post.summary['en'];
+
+            const col = document.createElement('div');
+            col.className = 'col-lg-6 mb-4';
+
+            col.innerHTML = `
+                <div class="card h-100 shadow-sm blog-card">
+                    ${post.image ? `<div class="card-img-wrapper"><img src="${post.image}" class="card-img-top" alt="${title}"></div>` : ''}
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h4">${title}</h3>
+                        <div class="text-muted mb-2 small">
+                            <i class="far fa-calendar-alt me-1"></i> ${postedOnText} ${post.date}
+                        </div>
+                        <p class="card-text flex-grow-1">${summary}</p>
+                        <div class="mt-3 mb-3">
+                            ${post.tags.map(tag => `<span class="badge bg-secondary me-1">${tag}</span>`).join('')}
+                        </div>
+                        <button class="btn btn-primary mt-auto w-100 read-more-btn" onclick="openBlogModal(${post.id})">
+                            ${readMoreText}
+                        </button>
+                    </div>
+                </div>
+            `;
+            blogContainer.appendChild(col);
+        });
+    }
 
     // Search functionality
     if (searchInput) {
@@ -77,11 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Listen for language changes to re-render posts
+    // Language change listener
     if (languageSelect) {
         languageSelect.addEventListener('change', (e) => {
             const newLang = e.target.value;
-            // Re-apply search filter if exists
             const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
 
             const filteredPosts = allPosts.filter(post => {
@@ -92,76 +94,61 @@ document.addEventListener('DOMContentLoaded', () => {
             renderPosts(filteredPosts, newLang);
         });
     }
-});
 
-function renderPosts(posts, lang) {
-    const blogContainer = document.getElementById('blog-posts-container');
-    if (!blogContainer) return;
+    // Global function to open modal
+    window.openBlogModal = function (postId) {
+        const post = allPosts.find(p => p.id === postId);
+        if (!post) return;
 
-    blogContainer.innerHTML = '';
-
-    // Get translations for static text
-    const translations = window.translations || {};
-    if (!window.translations) {
-        console.warn('Translations not found in window object. Using defaults.');
-    }
-
-    const readMoreText = translations[lang]?.blog?.read_more || 'Read More';
-    const postedOnText = translations[lang]?.blog?.posted_on || 'Posted on';
-
-    if (posts.length === 0) {
-        blogContainer.innerHTML = '<p class="text-center text-muted">No posts found.</p>';
-        return;
-    }
-
-    posts.forEach(post => {
+        const lang = getCurrentLang();
         const title = post.title[lang] || post.title['en'];
-        const summary = post.summary[lang] || post.summary['en'];
         const content = post.content[lang] || post.content['en'];
+        const date = post.date;
 
-        const postElement = document.createElement('div');
-        postElement.className = 'col-lg-6 mb-4';
-
-        postElement.innerHTML = `
-            <div class="card h-100 shadow-sm blog-card">
-                ${post.image ? `<img src="${post.image}" class="card-img-top" alt="${title}">` : ''}
-                <div class="card-body d-flex flex-column">
-                    <h3 class="card-title h4">${title}</h3>
-                    <div class="text-muted mb-2 small">
-                        <i class="far fa-calendar-alt me-1"></i> ${postedOnText} ${post.date}
-                    </div>
-                    <p class="card-text flex-grow-1">${summary}</p>
-                    <div class="mt-3">
-                        ${post.tags.map(tag => `<span class="badge bg-secondary me-1">${tag}</span>`).join('')}
-                    </div>
-                    <button class="btn btn-primary mt-3 w-100 read-more-btn" data-bs-toggle="modal" data-bs-target="#postModal${post.id}">
-                        ${readMoreText}
-                    </button>
-                </div>
-            </div>
-
-            <!-- Modal for this post -->
-            <div class="modal fade" id="postModal${post.id}" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+        // Create modal HTML dynamically
+        const modalHtml = `
+            <div class="modal fade" id="blogModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">${title}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ${post.image ? `<img src="${post.image}" class="img-fluid mb-3 rounded" alt="${title}">` : ''}
-                            <div class="blog-content">
+                            ${post.image ? `<img src="${post.image}" class="img-fluid mb-4 rounded blog-modal-hero" alt="${title}">` : ''}
+                            <div class="blog-post-meta mb-3 text-muted">
+                                <i class="far fa-calendar-alt me-1"></i> ${post.date}
+                            </div>
+                            <div class="blog-post-content">
                                 ${content}
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tancar</button>
                         </div>
                     </div>
                 </div>
             </div>
         `;
 
-        blogContainer.appendChild(postElement);
-    });
-}
+        // Remove existing modal if any
+        const existingModal = document.getElementById('blogModal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+
+        // Append new modal to body
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+        // Initialize and show Bootstrap modal
+        const modalElement = document.getElementById('blogModal');
+        const bsModal = new bootstrap.Modal(modalElement);
+        bsModal.show();
+
+        // Cleanup on hidden
+        modalElement.addEventListener('hidden.bs.modal', () => {
+            bsModal.dispose();
+            modalElement.remove();
+        });
+    };
+});
