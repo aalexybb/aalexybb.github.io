@@ -2,6 +2,8 @@
 const translations = {
     ca: {
         nav: {
+            home: "Inici",
+            curriculum: "Currículum",
             about: "Sobre mi",
             experience: "Experiència",
             education: "Educació",
@@ -11,6 +13,36 @@ const translations = {
             blog: "Blog",
             contact: "Contacte",
             download_cv: "Descarregar CV"
+        },
+        landing: {
+            hero: {
+                title: "Hola, sóc Alexander",
+                subtitle: "Tècnic Informàtic especialitzat en xarxes i sistemes",
+                description: "Apassionat per la tecnologia i la resolució de problemes. Amb experiència en manteniment de sistemes, configuració de xarxes i suport tècnic.",
+                btn_cv: "Veure CV",
+                btn_blog: "Blog",
+                btn_contact: "Contacta'm"
+            },
+            blog: {
+                title: "Últimes Entrades del Blog",
+                subtitle: "Descobreix els meus últims articles sobre tecnologia",
+                btn_more: "Veure tots els posts",
+                btn_read: "Llegir més"
+            },
+            skills: {
+                title: "Habilitats Tècniques",
+                subtitle: "Tecnologies i eines amb les que treballo",
+                networking: "Xarxes i Sistemes",
+                networking_desc: "Configuració i manteniment de xarxes, Cisco CCNA, troubleshooting",
+                programming: "Programació",
+                programming_desc: "HTML, CSS, JavaScript, Python, Bash scripting",
+                repair: "Reparació",
+                repair_desc: "Manteniment i reparació de dispositius mòbils i ordinadors"
+            },
+            contact: {
+                title: "Contacta'm",
+                description: "Estic obert a noves oportunitats i col·laboracions. No dubtis en contactar-me!"
+            }
         },
         success: {
             title: "Missatge Enviat!",
@@ -84,6 +116,8 @@ const translations = {
     },
     es: {
         nav: {
+            home: "Inicio",
+            curriculum: "Currículum",
             about: "Sobre mí",
             experience: "Experiencia",
             education: "Educación",
@@ -93,6 +127,36 @@ const translations = {
             blog: "Blog",
             contact: "Contacto",
             download_cv: "Descargar CV"
+        },
+        landing: {
+            hero: {
+                title: "Hola, soy Alexander",
+                subtitle: "Técnico Informático especializado en redes y sistemas",
+                description: "Apasionado por la tecnología y la resolución de problemas. Con experiencia en mantenimiento de sistemas, configuración de redes y soporte técnico.",
+                btn_cv: "Ver CV",
+                btn_blog: "Blog",
+                btn_contact: "Contáctame"
+            },
+            blog: {
+                title: "Últimas Entradas del Blog",
+                subtitle: "Descubre mis últimos artículos sobre tecnología",
+                btn_more: "Ver todos los posts",
+                btn_read: "Leer más"
+            },
+            skills: {
+                title: "Habilidades Técnicas",
+                subtitle: "Tecnologías y herramientas con las que trabajo",
+                networking: "Redes y Sistemas",
+                networking_desc: "Configuración y mantenimiento de redes, Cisco CCNA, troubleshooting",
+                programming: "Programación",
+                programming_desc: "HTML, CSS, JavaScript, Python, Bash scripting",
+                repair: "Reparación",
+                repair_desc: "Mantenimiento y reparación de dispositivos móviles y ordenadores"
+            },
+            contact: {
+                title: "Contáctame",
+                description: "Estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!"
+            }
         },
         success: {
             title: "¡Mensaje Enviado!",
@@ -166,6 +230,8 @@ const translations = {
     },
     en: {
         nav: {
+            home: "Home",
+            curriculum: "Resume",
             about: "About",
             experience: "Experience",
             education: "Education",
@@ -175,6 +241,36 @@ const translations = {
             blog: "Blog",
             contact: "Contact",
             download_cv: "Download CV"
+        },
+        landing: {
+            hero: {
+                title: "Hi, I'm Alexander",
+                subtitle: "IT Technician specialized in networks and systems",
+                description: "Passionate about technology and problem-solving. With experience in system maintenance, network configuration, and technical support.",
+                btn_cv: "View Resume",
+                btn_blog: "Blog",
+                btn_contact: "Contact Me"
+            },
+            blog: {
+                title: "Latest Blog Posts",
+                subtitle: "Discover my latest articles about technology",
+                btn_more: "View all posts",
+                btn_read: "Read more"
+            },
+            skills: {
+                title: "Technical Skills",
+                subtitle: "Technologies and tools I work with",
+                networking: "Networking & Systems",
+                networking_desc: "Network configuration and maintenance, Cisco CCNA, troubleshooting",
+                programming: "Programming",
+                programming_desc: "HTML, CSS, JavaScript, Python, Bash scripting",
+                repair: "Repair",
+                repair_desc: "Maintenance and repair of mobile devices and computers"
+            },
+            contact: {
+                title: "Contact Me",
+                description: "I'm open to new opportunities and collaborations. Don't hesitate to contact me!"
+            }
         },
         contact: {
             title: "Contact Me",
