@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Typing Effect Logic
 let typingTimeout;
 
-function typeWriter(text, elementId, speed = 50) {
+function typeWriter(text, elementId, speed = 20) {
     const element = document.getElementById(elementId);
     if (!element) return;
 
