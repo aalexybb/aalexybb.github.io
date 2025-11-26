@@ -52,5 +52,23 @@
             "en": "Linux"
         },
         "percent": 95
+    },
+    {
+        "id": 7,
+        "name": {
+            "ca": "N8N",
+            "es": "N8N",
+            "en": "N8N"
+        },
+        "percent": 80
+    },
+    {
+        "id": 8,
+        "name": {
+            "ca": "Aplicacions de Google",
+            "es": "Aplicaciones de Google",
+            "en": "Google Apps"
+        },
+        "percent": 80
     }
 ]
