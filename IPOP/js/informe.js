@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Language handling
-    const languageSelect = document.getElementById('languageSelect');
-    const currentLang = localStorage.getItem('preferredLanguage') || 'ca';
-
-    if (languageSelect) {
-        languageSelect.value = currentLang;
-        languageSelect.addEventListener('change', (e) => {
-            const newLang = e.target.value;
-            localStorage.setItem('preferredLanguage', newLang);
-            updateTranslations(newLang);
-        });
-    }
-
     // Dark mode toggle
     const themeToggle = document.getElementById('themeToggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
@@ -34,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Load translations
-    updateTranslations(currentLang);
+
 
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -71,25 +57,3 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 });
-
-function updateTranslations(lang) {
-    if (!window.translations || !window.translations[lang]) {
-        console.warn('Translations not loaded');
-        return;
-    }
-
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        const keys = key.split('.');
-        let value = window.translations[lang];
-
-        for (const k of keys) {
-            value = value?.[k];
-        }
-
-        if (value) {
-            element.textContent = value;
-        }
-    });
-}
