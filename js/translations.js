@@ -102,7 +102,8 @@ const translations = {
         interests: {
             title: "Interessos",
             paragraph1: "A part de ser tècnic informàtic, gaudeixo del meu temps lliure explorant les últimes novetats tecnològiques, muntant i reparant ordinadors per diversió, i aprenent sobre ciberseguretat.",
-            paragraph2: "També m'agrada jugar a videojocs, veure sèries de ciència-ficció i passar temps amb els amics."
+            paragraph2: "També m'agrada jugar a videojocs, veure sèries de ciència-ficció i passar temps amb els amics.",
+            paragraph3: "A més, com a aficionat a la ciberseguretat estic començant a aprendre tècniques de red team i blue team. Practico resolent màquines vulnerables (DockerLabs) i documento el procés en <a href=\"https://github.com/aalexybb/pentesting\" target=\"_blank\" rel=\"noopener\">writeups</a>, fixant-me tant en l'atac com en la detecció i les mesures de mitigació."
         },
         awards: {
             title: "Certificacions",
@@ -222,7 +223,8 @@ const translations = {
         interests: {
             title: "Intereses",
             paragraph1: "Aparte de ser técnico informático, disfruto de mi tiempo libre explorando las últimas novedades tecnológicas, montando y reparando ordenadores por diversión, y aprendiendo sobre ciberseguridad.",
-            paragraph2: "También me gusta jugar a videojuegos, ver series de ciencia ficción y pasar tiempo con los amigos."
+            paragraph2: "También me gusta jugar a videojuegos, ver series de ciencia ficción y pasar tiempo con los amigos.",
+            paragraph3: "Además, como aficionado a la ciberseguridad estoy empezando a aprender técnicas de red team y blue team. Practico resolviendo máquinas vulnerables (DockerLabs) y documento el proceso en <a href=\"https://github.com/aalexybb/pentesting\" target=\"_blank\" rel=\"noopener\">writeups</a>, fijándome tanto en el ataque como en la detección y las medidas de mitigación."
         },
         awards: {
             title: "Certificaciones",
@@ -342,7 +344,8 @@ const translations = {
         interests: {
             title: "Interests",
             paragraph1: "Apart from being an IT technician, I enjoy my free time exploring the latest technological news, building and repairing computers for fun, and learning about cybersecurity.",
-            paragraph2: "I also like playing video games, watching sci-fi series, and spending time with friends."
+            paragraph2: "I also like playing video games, watching sci-fi series, and spending time with friends.",
+            paragraph3: "Also, as a cybersecurity enthusiast I'm starting to learn red team and blue team techniques. I practice by solving vulnerable machines (DockerLabs) and document the process in <a href=\"https://github.com/aalexybb/pentesting\" target=\"_blank\" rel=\"noopener\">writeups</a>, focusing on both the attack and the detection and mitigation measures."
         },
         awards: {
             title: "Certifications",
