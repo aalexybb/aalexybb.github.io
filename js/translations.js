@@ -75,6 +75,12 @@ const translations = {
         },
         education: {
             title: "Educació",
+            school0: {
+                name: "Cicle Formatiu de Grau Superior",
+                degree: "Administració de Sistemes Informàtics en Xarxa (ASIX)",
+                date: "2025 - Actualitat",
+                description: "En curs - cursant el segon any. Formació en administració de sistemes, xarxes i serveis d'Internet."
+            },
             school1: {
                 name: "IES Eugeni d'Ors",
                 degree: "Tècnic en Sistemes Microinformàtics i Xarxes (SMR)",
@@ -189,6 +195,12 @@ const translations = {
         },
         education: {
             title: "Educación",
+            school0: {
+                name: "Ciclo Formativo de Grado Superior",
+                degree: "Administración de Sistemas Informáticos en Red (ASIR)",
+                date: "2025 - Actualidad",
+                description: "En curso - cursando el segundo año. Formación en administración de sistemas, redes y servicios de Internet."
+            },
             school1: {
                 name: "IES Eugeni d'Ors",
                 degree: "Técnico en Sistemas Microinformáticos y Redes (SMR)",
@@ -303,6 +315,12 @@ const translations = {
         },
         education: {
             title: "Education",
+            school0: {
+                name: "Higher Level Vocational Training",
+                degree: "Networked Computer Systems Administration (ASIR)",
+                date: "2025 - Present",
+                description: "In progress - currently in the second year. Training in systems, network and Internet services administration."
+            },
             school1: {
                 name: "IES Eugeni d'Ors",
                 degree: "Technician in Microcomputer Systems and Networks (SMR)",
